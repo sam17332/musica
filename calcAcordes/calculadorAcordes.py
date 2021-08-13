@@ -1,3 +1,15 @@
+def obtenerTipo(grado):
+    tipo = ""
+    print(grado)
+    if(grado == 1 or grado == 3 or grado == 6):
+        tipo = "TONICA"
+    elif(grado == 2 or grado == 4):
+        tipo = "SUB-DOMINANTE"
+    elif(grado == 5 or grado == 7):
+        tipo = "DOMINANTE"
+    print(tipo)
+    return tipo
+
 notas = ["do", "do#", "re", "re#", "mi", "fa", "fa#", "sol", "sol#", "la","la#", "si", "do", "do#", "re", "re#", "mi", "fa", "fa#", "sol", "sol#", "la","la#", "si"]
 sumasEscala = [2, 2, 1, 2, 2, 2, 1]
 sumasAcorde = [2, 2]
@@ -15,6 +27,7 @@ print('''
     -------------------------------------
 ''')
 
+grado = input("Ingrese un grado (de 1 a 7): ")
 nota = input("Ingrese una de las notas de arriba para saber su escala y su acorde: ")
 print()
 
@@ -62,8 +75,11 @@ if (nota in notas):
         elif(salto1 == 4 and salto2 == 3):
             tipo = "Mayor"
 
-        print("El acorde # " + str(cont) + " es: " + str(arrayAcorde) + ". Su tipo es: " + tipo)
+        if(cont == int(grado)):
+            print("El acorde # " + str(cont) + " es: " + str(arrayAcorde) + ". Su tipo es: " + obtenerTipo(int(grado)) + " - " + tipo)
+
         cont += 1
 
 else:
     print("Ingrese una nota valida!!")
+
