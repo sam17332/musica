@@ -240,8 +240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -77.84187, y: -117.00001}
-  m_SizeDelta: {x: 217.4473, y: 41.325}
+  m_AnchoredPosition: {x: -23.5334, y: -117.00001}
+  m_SizeDelta: {x: 326.0643, y: 41.325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28438298
 MonoBehaviour:
@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &411331565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 549913929}
   - component: {fileID: 549913928}
   m_Layer: 0
-  m_Name: Nota value
+  m_Name: Acordes value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1219,12 +1219,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 645.69525}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
-  m_Father: {fileID: 918709024}
-  m_RootOrder: 1
+  m_Father: {fileID: 1649688976}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.350843, y: 11.21833}
+  m_AnchoredPosition: {x: 10.350843, y: -299.74707}
   m_SizeDelta: {x: 548.1992, y: 47.614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &557691155
@@ -1376,7 +1376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &604651423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1560,13 +1560,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 645.69525}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
-  m_Father: {fileID: 918709024}
-  m_RootOrder: 4
+  m_Father: {fileID: 1649688976}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.20776, y: -265.12213}
-  m_SizeDelta: {x: 119.2508, y: 69.8398}
+  m_AnchoredPosition: {x: -511.51163, y: -423}
+  m_SizeDelta: {x: 143.871, y: 72.9173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776536065
 MonoBehaviour:
@@ -1601,7 +1601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Funciones tonales:'
+  m_Text: "Progresi\xF3n de acordes:"
 --- !u!222 &776536066
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &791780670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,7 @@ RectTransform:
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
   m_Father: {fileID: 918709024}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1756,7 +1756,7 @@ GameObject:
   - component: {fileID: 795379234}
   - component: {fileID: 795379233}
   m_Layer: 0
-  m_Name: Nota
+  m_Name: Acordes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,12 +1773,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 645.69525}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
-  m_Father: {fileID: 918709024}
-  m_RootOrder: 0
+  m_Father: {fileID: 1649688976}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -542.6034, y: 11.965363}
+  m_AnchoredPosition: {x: -542.6034, y: -299}
   m_SizeDelta: {x: 105.0063, y: 33.4371}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &795379233
@@ -1814,7 +1814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nota:'
+  m_Text: 'Acordes:'
 --- !u!222 &795379234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2021,7 +2021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &918709024
 Transform:
   m_ObjectHideFlags: 0
@@ -2033,12 +2033,8 @@ Transform:
   m_LocalPosition: {x: 15.630226, y: 26.521645, z: -403.55954}
   m_LocalScale: {x: 0.625, y: 0.625, z: 0.625}
   m_Children:
-  - {fileID: 795379232}
-  - {fileID: 549913930}
   - {fileID: 1367849850}
   - {fileID: 791780672}
-  - {fileID: 776536064}
-  - {fileID: 2135950123}
   m_Father: {fileID: 1839499989}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3049,7 +3045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1367849850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3062,12 +3058,12 @@ RectTransform:
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
   m_Father: {fileID: 918709024}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -522.3445, y: -82.3309}
-  m_SizeDelta: {x: 130.3299, y: 41.3507}
+  m_AnchoredPosition: {x: -522.3445, y: -76.17584}
+  m_SizeDelta: {x: 130.3299, y: 33.6569}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367849851
 MonoBehaviour:
@@ -3102,7 +3098,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Compases:'
+  m_Text: 'Ritmo:'
 --- !u!222 &1367849852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3700,7 +3696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1524700236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4177,7 +4173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1649688976
 Transform:
   m_ObjectHideFlags: 0
@@ -4195,6 +4191,10 @@ Transform:
   - {fileID: 1679975091}
   - {fileID: 604651423}
   - {fileID: 411331565}
+  - {fileID: 795379232}
+  - {fileID: 549913930}
+  - {fileID: 776536064}
+  - {fileID: 2135950123}
   m_Father: {fileID: 1839499989}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5093,7 +5093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Generar acordes
+  m_Text: "Generar acordes y melod\xEDa"
 --- !u!222 &1881165019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5459,7 +5459,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -80.71878, w: -55.395306}
+  m_margin: {x: 0, y: 0, z: -33.017212, w: -55.395306}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5484,11 +5484,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 645.69525}
   m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
   m_Children: []
-  m_Father: {fileID: 918709024}
-  m_RootOrder: 5
+  m_Father: {fileID: 1649688976}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.350843, y: -227}
+  m_AnchoredPosition: {x: 59, y: -387.3399}
   m_SizeDelta: {x: 548.1992, y: 47.614}
   m_Pivot: {x: 0.5, y: 0.5}

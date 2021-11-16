@@ -35,8 +35,11 @@ public class Music : MonoBehaviour
     private List<string> tipo2 = new List<string>() { "TONICA", "SUB-DOMINANTE", "DOMINANTE" };
     public List<string> compasTipo1 = new List<string>();
     public List<string> compasTipo2 = new List<string>();
+    private ArrayList listaAcordes = new ArrayList();
+    private ArrayList notasPorAcorde = new ArrayList();
     private bool ritmoBool = true;
     private bool acordesBool = true;
+    private bool melodiaBool = true;
     private bool inicio = true;
     private Dictionary<int, List<string>> acordes = new Dictionary<int, List<string>>();
     private Dictionary<string, int> notas = new Dictionary<string, int>(){
@@ -53,6 +56,21 @@ public class Music : MonoBehaviour
             {"LA#", 13},
             {"SI", 14}
         };
+    private Dictionary<int, string> notas2 = new Dictionary<int, string>(){
+        {3, "DO"},
+        {4, "DO#"},
+        {5, "RE"},
+        {6, "RE#"},
+        {7, "MI"},
+        {8, "FA"},
+        {9, "FA#"},
+        {10, "SOL"},
+        {11, "SOL#"},
+        {12, "LA"},
+        {13, "LA#"},
+        {14, "SI"},
+    };
+    private Dictionary<string, int[]> acordesDic = new Dictionary<string, int[]>();
 
     void Start()
     {
@@ -61,6 +79,13 @@ public class Music : MonoBehaviour
         BPM = Int16.Parse(inputField.GetComponent<TMP_InputField>().text);
         acordesObj.SetActive(false);
         ritmoObj.SetActive(true);
+        acordesDic.Add("DO", new[] {3, 7, 10});
+        acordesDic.Add("RE", new[] {5, 9, 12});
+        acordesDic.Add("MI", new[] {7, 11, 14});
+        acordesDic.Add("FA", new[] {8, 12, 3});
+        acordesDic.Add("SOL", new[] {10, 14, 5});
+        acordesDic.Add("LA", new[] {12, 4, 7});
+        acordesDic.Add("SI", new[] {14, 6, 9});
     }
     
     void Update()
@@ -105,13 +130,38 @@ public class Music : MonoBehaviour
         ritmoBool = false;
         acordesBool = true;
         inicio = false;
-        string nota = generador.getRandomNote();
-        compasTipo1 = new List<string>();
-        compasTipo2 = new List<string>();
-        generador.arrayEscala = new List<string>();
-        generador.GetAcordes(nota);
-        GenerarCompas();
-        notaTxt.text = nota;
+        listaAcordes = generador.getRandomChords();
+        string concat = "";
+        foreach (var acorde in listaAcordes)
+        {
+            concat += acorde + ", ";
+        }
+        notaTxt.text = concat;
+        GenerateRythm();
+        GenerarMelodia();
+    }
+
+    private void GenerarMelodia()
+    {
+        melodiaBool = true;
+        System.Random random = new System.Random();
+        notasPorAcorde = new ArrayList();
+        foreach (var acorde in listaAcordes)
+        {
+            string aco = acorde.ToString();
+
+            int[] acordeArr = acordesDic[aco];
+            int nota = acordeArr[random.Next(3)];
+            notasPorAcorde.Add(notas2[nota]);
+        }
+        
+        string notasConcat = "";
+        foreach (var acorde in notasPorAcorde)
+        {
+            notasConcat += acorde + ", ";
+        }
+
+        tonicaTxt.text = notasConcat;
     }
     
     private void GenerarCompas()
@@ -148,11 +198,11 @@ public class Music : MonoBehaviour
             acordes.Add(i, SearchRandomChord(tipo));
         }
 
-        //foreach (var acorde in acordes)
-        //{
-        //    print(acorde.Key);
-        //    print(string.Join(", ", acorde.Value));
-        //}
+        // foreach (var acorde in acordes)
+        // {
+        //     print(acorde.Key);
+        //     print(string.Join(", ", acorde.Value));
+        // }
 
         tonicaTxt.text = string.Join(", ", compasTipo2);
     }
@@ -190,8 +240,9 @@ public class Music : MonoBehaviour
     
     public void GenerateRythm()
     {
+        melodiaBool = false;
         ritmoBool = true;
-        acordesBool = false;
+        acordesBool = true;
         inicio = false;
         int[] subdivisionArray = { 3, 4 };
         int[] cantidadEspacios = { 1, 2, 4 };
@@ -313,9 +364,62 @@ public class Music : MonoBehaviour
         int contBlanca = 0;
         int contNegra = 0;
         string compas;
+        int index = 0;
         while (Time.time < cantidadTiempo && play)
         {
-            if (acordesBool)
+            if (melodiaBool)
+            {
+                arraySonidos[0].Play();
+                contStart++;
+                if (contStart % 2 == 0)
+                {
+                    if (EvalFillerMetric() == 0)
+                    {
+                        arraySonidos[1].Play();
+                    }
+                    else
+                    {
+                        arraySonidos[2].Play();
+                    }
+                    contador++;
+                }
+
+                bool next = true;
+                int[] valor = new int[3];
+                if (next)
+                {
+                    index = indexActual % 16;
+                    string acorde = listaAcordes[index].ToString();
+                    valor = acordesDic[acorde];
+                }
+
+                for (int i = 0; i < 4; i++)
+                {
+                    arraySonidos[valor[0]].Play();
+                    arraySonidos[valor[1]].Play();
+                    arraySonidos[valor[2]].Play();
+                    if (i == 0)
+                    {
+                        string notaActual = notasPorAcorde[index].ToString();
+                        arraySonidos[notas[notaActual]].Play();
+                    }
+
+                    if (i == 3)
+                    {
+                        next = true;
+                    }
+                    else
+                    {
+                        next = false;
+                    }
+                }
+
+                if (next)
+                {
+                    indexActual += 1;    
+                }
+            }
+            else if (acordesBool)
             {
                 if (indexActual < acordes.Count - 1)
                 {

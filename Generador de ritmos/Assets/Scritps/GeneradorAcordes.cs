@@ -6,6 +6,7 @@ using UnityEngine;
 public class GeneradorAcordes : MonoBehaviour
 {
     private List<string> arrayNotas = new List<string>() { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" };
+    private List<string> arrayNotas2 = new List<string>() { "DO", "RE", "MI", "FA", "SOL", "LA", "SI" };
     private List<string> notas = new List<string>() { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI", "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" };
     private List<string> arrayAcorde = new List<string>();
     private List<int> sumasEscala = new List<int>() {2, 2, 1, 2, 2, 2, 1};
@@ -21,6 +22,24 @@ public class GeneradorAcordes : MonoBehaviour
         System.Random random = new System.Random();
 
         return arrayNotas[random.Next(arrayNotas.Count)];
+    }
+
+    public ArrayList getRandomChords()
+    {
+        System.Random random = new System.Random();
+        ArrayList acordes = new ArrayList();
+
+        for (int i = 0; i < 16; i++)
+        {
+            acordes.Add(arrayNotas2[random.Next(arrayNotas2.Count)]);
+        }
+
+        // foreach (var acorde in acordes)
+        // {
+        //     print(acorde);
+        // }
+
+        return acordes;
     }
     
     private string obtenerTipo(int grado)
